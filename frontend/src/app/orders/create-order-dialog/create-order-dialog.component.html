@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>Create Order</h2>
+<mat-dialog-content>
+  <form [formGroup]="form" id="create-order-form">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Customer ID</mat-label>
+      <input matInput formControlName="customerId" />
+      <mat-error>Customer ID is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Product ID</mat-label>
+      <input matInput formControlName="productId" />
+      <mat-error>Product ID is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Quantity</mat-label>
+      <input matInput type="number" formControlName="quantity" min="1" />
+      <mat-error>Quantity must be &gt; 0</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Unit Price</mat-label>
+      <input matInput type="number" formControlName="unitPrice" min="0" step="0.01" />
+      <mat-error>Price must be &gt; 0</mat-error>
+    </mat-form-field>
+  </form>
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="loading || form.invalid">
+    @if (loading) {
+      <mat-spinner diameter="20"></mat-spinner>
+    } @else {
+      Create
+    }
+  </button>
+</mat-dialog-actions>

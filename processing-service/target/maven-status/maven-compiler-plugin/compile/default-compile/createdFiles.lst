@@ -1,0 +1,17 @@
+com\platform\processing\steps\ApprovalStep.class
+com\platform\processing\steps\PaymentStep.class
+com\platform\processing\saga\SagaStepResult.class
+com\platform\processing\consumer\OrderEventConsumer.class
+com\platform\processing\dlq\DLQConsumer.class
+com\platform\processing\saga\SagaOrchestrator.class
+com\platform\processing\repository\OrderRepository.class
+com\platform\processing\entity\OrderEntity.class
+com\platform\processing\ProcessingServiceApplication.class
+com\platform\processing\config\KafkaConsumerConfig.class
+com\platform\processing\entity\OrderStatusHistoryEntity.class
+com\platform\processing\repository\OrderStatusRepository.class
+com\platform\processing\steps\ComplianceStep.class
+com\platform\processing\config\KafkaProducerConfig.class
+com\platform\processing\config\VirtualThreadConfig.class
+com\platform\processing\service\OrderEventPublisher.class
+com\platform\processing\steps\ShippingStep.class

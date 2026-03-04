@@ -1,0 +1,22 @@
+2026-03-02 12:13:40.425 INFO  org.glowroot - Glowroot version: 0.14.4, built 2025-05-07 00:19:18 +0000
+2026-03-02 12:13:40.461 INFO  org.glowroot - Java version: 21.0.10 (Eclipse Adoptium / Linux)
+2026-03-02 12:13:40.462 INFO  org.glowroot - Java args: -javaagent:/opt/glowroot/glowroot.jar
+2026-03-02 12:13:53.766 INFO  org.glowroot - creating glowroot schema...
+2026-03-02 12:13:54.259 INFO  org.glowroot - glowroot schema created
+2026-03-02 12:13:55.559 INFO  org.glowroot - UI listening on 127.0.0.1:4000 (to access the UI from remote machines, change the bind address to 0.0.0.0, either in the Glowroot UI under Configuration > Web or directly in the admin.json file, and then restart JVM to take effect)
+2026-03-02 12:27:16.407 INFO  org.glowroot - Glowroot version: 0.14.4, built 2025-05-07 00:19:18 +0000
+2026-03-02 12:27:16.431 INFO  org.glowroot - Java version: 21.0.10 (Eclipse Adoptium / Linux)
+2026-03-02 12:27:16.434 INFO  org.glowroot - Java args: -javaagent:/opt/glowroot/glowroot.jar
+2026-03-02 12:27:28.575 INFO  org.glowroot - UI listening on 127.0.0.1:4000 (to access the UI from remote machines, change the bind address to 0.0.0.0, either in the Glowroot UI under Configuration > Web or directly in the admin.json file, and then restart JVM to take effect)
+2026-03-02 12:36:13.887 INFO  org.glowroot - Glowroot version: 0.14.4, built 2025-05-07 00:19:18 +0000
+2026-03-02 12:36:13.910 INFO  org.glowroot - Java version: 21.0.10 (Eclipse Adoptium / Linux)
+2026-03-02 12:36:13.911 INFO  org.glowroot - Java args: -javaagent:/opt/glowroot/glowroot.jar
+2026-03-02 12:36:27.454 INFO  org.glowroot - UI listening on 127.0.0.1:4000 (to access the UI from remote machines, change the bind address to 0.0.0.0, either in the Glowroot UI under Configuration > Web or directly in the admin.json file, and then restart JVM to take effect)
+2026-03-02 12:46:22.700 INFO  org.glowroot - Glowroot version: 0.14.4, built 2025-05-07 00:19:18 +0000
+2026-03-02 12:46:22.736 INFO  org.glowroot - Java version: 21.0.10 (Eclipse Adoptium / Linux)
+2026-03-02 12:46:22.738 INFO  org.glowroot - Java args: -javaagent:/opt/glowroot/glowroot.jar
+2026-03-02 12:46:36.607 INFO  org.glowroot - UI listening on 127.0.0.1:4000 (to access the UI from remote machines, change the bind address to 0.0.0.0, either in the Glowroot UI under Configuration > Web or directly in the admin.json file, and then restart JVM to take effect)
+2026-03-02 12:58:37.276 INFO  org.glowroot - Glowroot version: 0.14.4, built 2025-05-07 00:19:18 +0000
+2026-03-02 12:58:37.297 INFO  org.glowroot - Java version: 21.0.10 (Eclipse Adoptium / Linux)
+2026-03-02 12:58:37.300 INFO  org.glowroot - Java args: -javaagent:/opt/glowroot/glowroot.jar
+2026-03-02 12:58:49.518 INFO  org.glowroot - UI listening on 127.0.0.1:4000 (to access the UI from remote machines, change the bind address to 0.0.0.0, either in the Glowroot UI under Configuration > Web or directly in the admin.json file, and then restart JVM to take effect)

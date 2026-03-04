@@ -1,0 +1,103 @@
+/* TrackNexus / Supply Chain Command theme */
+:root {
+  --bg: #080c10;
+  --surface: #0d1318;
+  --panel: #111820;
+  --border: #1e2d3d;
+  --border-bright: #2a4060;
+  --accent: #00d4ff;
+  --accent2: #ff6b35;
+  --accent3: #00ff88;
+  --warn: #ffbe00;
+  --danger: #ff3d5a;
+  --text: #e8f4fd;
+  --text-muted: #6a8fab;
+  --text-dim: #3d5a73;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Syne', Roboto, sans-serif;
+  color: var(--text);
+}
+
+body {
+  background: var(--bg);
+}
+
+.tracknexus-body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: 'JetBrains Mono', monospace;
+  white-space: nowrap;
+}
+.status-badge::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.status-badge.updated {
+  animation: highlight 0.8s ease;
+}
+@keyframes highlight {
+  0% { box-shadow: 0 0 0 0 rgba(0,212,255,0.5); }
+  70% { box-shadow: 0 0 0 8px rgba(0,212,255,0); }
+  100% { box-shadow: none; }
+}
+.status-PENDING { background: rgba(255,190,0,0.1); color: var(--warn); border: 1px solid rgba(255,190,0,0.2); }
+.status-PENDING::before { background: var(--warn); }
+.status-PAYMENT_VALIDATED { background: rgba(0,180,255,0.1); color: #00b4ff; border: 1px solid rgba(0,180,255,0.2); }
+.status-PAYMENT_VALIDATED::before { background: #00b4ff; }
+.status-COMPLIANCE_CHECKED { background: rgba(100,180,255,0.1); color: #64b4ff; border: 1px solid rgba(100,180,255,0.2); }
+.status-COMPLIANCE_CHECKED::before { background: #64b4ff; }
+.status-APPROVED { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.2); }
+.status-APPROVED::before { background: var(--accent); }
+.status-SHIPPED { background: rgba(0,255,136,0.1); color: var(--accent3); border: 1px solid rgba(0,255,136,0.2); }
+.status-SHIPPED::before { background: var(--accent3); }
+.status-PAYMENT_FAILED, .status-REJECTED, .status-CANCELLED { background: rgba(255,61,90,0.1); color: var(--danger); border: 1px solid rgba(255,61,90,0.2); }
+.status-PAYMENT_FAILED::before, .status-REJECTED::before, .status-CANCELLED::before { background: var(--danger); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* Dialog overlay TrackNexus */
+.tracknexus-dialog .mat-mdc-dialog-container { background: var(--panel) !important; border: 1px solid var(--border-bright); border-radius: 14px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+.tracknexus-dialog .mat-mdc-dialog-title { color: var(--accent); font-weight: 800; font-size: 18px; }
+.tracknexus-dialog .mat-mdc-dialog-content { color: var(--text); }
+.tracknexus-dialog .mat-mdc-form-field .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading,
+.tracknexus-dialog .mat-mdc-form-field .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__notch,
+.tracknexus-dialog .mat-mdc-form-field .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__trailing { border-color: var(--border-bright); }
+.tracknexus-dialog .mat-mdc-form-field .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading,
+.tracknexus-dialog .mat-mdc-form-field .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__notch,
+.tracknexus-dialog .mat-mdc-form-field .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__trailing { border-color: var(--border-bright); }
+.tracknexus-dialog .mdc-text-field--outlined .mdc-notched-outline--notched .mdc-floating-label { color: var(--accent); }
+.tracknexus-dialog .mat-mdc-raised-button:not(:disabled) { background: var(--accent); color: #000; }
+.tracknexus-dialog .mat-mdc-button { color: var(--text-muted); }

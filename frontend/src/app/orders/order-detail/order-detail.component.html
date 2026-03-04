@@ -1,0 +1,67 @@
+<div class="detail-view">
+  <a routerLink="/dashboard" class="back-link">&#8592; Back to Orders</a>
+
+  @if (loading) {
+    <div class="spinner">Loading...</div>
+  } @else if (!order) {
+    <div class="detail-panel"><p class="text-muted">Order not found.</p></div>
+  } @else {
+    <div class="detail-panel">
+      <div class="detail-order-id">Order {{ order.orderId }}</div>
+      <span class="status-badge" [ngClass]="statusClass(order.status)" style="margin-bottom: 14px; display: inline-flex;">{{ order.status }}</span>
+      <div class="divider"></div>
+      <div class="detail-row"><span class="detail-key">Customer:</span><span class="detail-val">{{ order.customerId }}</span></div>
+      <div class="detail-row"><span class="detail-key">Total:</span><span class="detail-val">{{ order.totalAmount | number:'1.2-2' }}</span></div>
+      <div class="detail-row"><span class="detail-key">Created:</span><span class="detail-val">{{ order.createdAt | date:'medium' }}</span></div>
+      <div class="detail-row"><span class="detail-key">Updated:</span><span class="detail-val">{{ order.updatedAt | date:'medium' }}</span></div>
+    </div>
+
+    @if (order.items && order.items.length) {
+      <div class="detail-panel">
+        <div class="panel-title-inner">Order Items</div>
+        <div class="table-wrap">
+          <table class="items-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Qty</th>
+                <th>Unit Price</th>
+                <th>Line Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (item of order.items; track item.id) {
+                <tr>
+                  <td class="order-customer">{{ item.productId }}</td>
+                  <td>{{ item.quantity }}</td>
+                  <td>{{ item.unitPrice | number:'1.2-2' }}</td>
+                  <td>{{ (item.quantity * item.unitPrice) | number:'1.2-2' }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    }
+
+    @if (order.statusHistory && order.statusHistory.length) {
+      <div class="detail-panel">
+        <div class="panel-title-inner">Status history</div>
+        <div class="history-list">
+          @for (entry of order.statusHistory; track entry.changedAt + entry.toStatus) {
+            <div class="history-item">
+              <div class="history-dot">&#8857;</div>
+              <div class="history-info">
+                <span class="status-badge" [ngClass]="statusClass(entry.toStatus)">{{ entry.toStatus }}</span>
+                <div class="history-time">{{ entry.changedAt | date:'medium' }}</div>
+                @if (entry.fromStatus) {
+                  <div class="history-from">from {{ entry.fromStatus }}</div>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  }
+</div>

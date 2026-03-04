@@ -1,0 +1,3 @@
+com\platform\order\OrderServiceTest.class
+com\platform\order\OrderControllerIntegrationTest.class
+com\platform\order\OutboxRelayTest.class

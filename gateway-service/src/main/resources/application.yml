@@ -1,0 +1,81 @@
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]':
+            allowed-origins:
+              - "http://localhost:4200"
+              - "http://localhost"
+              - "http://127.0.0.1"
+              - "http://127.0.0.1:4200"
+            allowed-methods: "*"
+            allowed-headers: "*"
+            allow-credentials: true
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        # Order Service: /api/** -> order-service (strip /api prefix); Round Robin via lb://
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/api/**
+          filters:
+            - StripPrefix=1
+        # Processing Service: /processing/** (e.g. actuator, future APIs); Round Robin via lb://
+        - id: processing-service
+          uri: lb://processing-service
+          predicates:
+            - Path=/processing/**
+          filters:
+            - StripPrefix=1
+        # Notification Service: WebSocket /ws
+        - id: notification-ws
+          uri: lb://notification-service
+          predicates:
+            - Path=/ws,/ws/**
+        # Notification Service: SSE
+        - id: notification-sse
+          uri: lb://notification-service
+          predicates:
+            - Path=/sse/**
+        # Notification Service: REST (stats) — frontend calls /notify-api/stats
+        - id: notification-api
+          uri: lb://notification-service
+          predicates:
+            - Path=/notify-api/**
+          filters:
+            - StripPrefix=1
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: false
+    instance-id: ${spring.application.name}:${server.port}
+
+# Round Robin: default strategy when using lb:// with Spring Cloud LoadBalancer (no config needed)
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway,metrics
+  endpoint:
+    health:
+      show-details: when-authorized
+
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.gateway: INFO
+    reactor.netty: WARN

@@ -1,0 +1,1 @@
+import{I as n}from"./chunk-PXBCRS4C.js";var i=(()=>{class t{constructor(){this.token=null}getToken(){return this.token}setToken(e){this.token=e}clearToken(){this.token=null}isAuthenticated(){return!!this.token}static{this.\u0275fac=function(o){return new(o||t)}}static{this.\u0275prov=n({token:t,factory:t.\u0275fac,providedIn:"root"})}}return t})();export{i as a};

@@ -1,0 +1,37 @@
+<div class="app-grid">
+  <header class="app-header">
+    <div class="logo">
+      <div class="logo-icon">&#x2B21;</div>
+      <span>Order Platform</span>
+    </div>
+    <div class="header-divider"></div>
+    <div class="throughput-badge">
+      <div class="pulse-dot"></div>
+      <span>Live</span>
+    </div>
+    <div class="header-sep"></div>
+    <ng-container *ngIf="stats$ | async as s">
+      <div class="header-stat">
+        <span class="val">{{ s.ordersToday | number }}</span>
+        <span class="lbl">Orders Today</span>
+      </div>
+      <div class="header-sep"></div>
+      <div class="header-stat">
+        <span class="val accent3">{{ s.totalOrders | number }}</span>
+        <span class="lbl">Total</span>
+      </div>
+    </ng-container>
+    <div class="header-sep"></div>
+    <div class="avatar" (click)="logout()" title="Logout">{{ initial() }}</div>
+  </header>
+
+  <nav class="sidebar">
+    <a routerLink="/dashboard" routerLinkActive="active" class="nav-item" [routerLinkActiveOptions]="{ exact: true }">
+      <span class="nav-icon">&#x2B21;</span> Dashboard
+    </a>
+  </nav>
+
+  <main class="main">
+    <router-outlet></router-outlet>
+  </main>
+</div>

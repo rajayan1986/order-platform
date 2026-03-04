@@ -1,0 +1,32 @@
+2026-03-04 07:21:43.502 INFO  org.glowroot - Glowroot version: 0.14.4, built 2025-05-07 00:19:18 +0000
+2026-03-04 07:21:43.525 INFO  org.glowroot - Java version: 21.0.10 (Eclipse Adoptium / Linux)
+2026-03-04 07:21:43.531 INFO  org.glowroot - Java args: -javaagent:/opt/glowroot/glowroot.jar
+2026-03-04 07:21:58.731 INFO  org.glowroot - UI listening on 0.0.0.0:4000
+2026-03-04 07:54:09.234 INFO  org.glowroot - Glowroot version: 0.14.4, built 2025-05-07 00:19:18 +0000
+2026-03-04 07:54:09.253 INFO  org.glowroot - Java version: 21.0.10 (Eclipse Adoptium / Linux)
+2026-03-04 07:54:09.255 INFO  org.glowroot - Java args: -javaagent:/opt/glowroot/glowroot.jar
+2026-03-04 07:54:20.766 INFO  org.glowroot - UI listening on 0.0.0.0:4000
+2026-03-04 08:23:36.318 INFO  org.glowroot - Glowroot version: 0.14.4, built 2025-05-07 00:19:18 +0000
+2026-03-04 08:23:36.332 INFO  org.glowroot - Java version: 21.0.10 (Eclipse Adoptium / Linux)
+2026-03-04 08:23:36.334 INFO  org.glowroot - Java args: -javaagent:/opt/glowroot/glowroot.jar
+2026-03-04 08:23:45.695 INFO  org.glowroot - UI listening on 0.0.0.0:4000
+2026-03-04 08:31:45.659 INFO  org.glowroot - Glowroot version: 0.14.4, built 2025-05-07 00:19:18 +0000
+2026-03-04 08:31:45.674 INFO  org.glowroot - Java version: 21.0.10 (Eclipse Adoptium / Linux)
+2026-03-04 08:31:45.676 INFO  org.glowroot - Java args: -javaagent:/opt/glowroot/glowroot.jar
+2026-03-04 08:31:56.653 INFO  org.glowroot - UI listening on 0.0.0.0:4000
+2026-03-04 08:35:47.936 INFO  org.glowroot - Glowroot version: 0.14.4, built 2025-05-07 00:19:18 +0000
+2026-03-04 08:35:47.949 INFO  org.glowroot - Java version: 21.0.10 (Eclipse Adoptium / Linux)
+2026-03-04 08:35:47.951 INFO  org.glowroot - Java args: -javaagent:/opt/glowroot/glowroot.jar
+2026-03-04 08:35:58.945 INFO  org.glowroot - UI listening on 0.0.0.0:4000
+2026-03-04 08:41:49.392 INFO  org.glowroot - Glowroot version: 0.14.4, built 2025-05-07 00:19:18 +0000
+2026-03-04 08:41:49.407 INFO  org.glowroot - Java version: 21.0.10 (Eclipse Adoptium / Linux)
+2026-03-04 08:41:49.410 INFO  org.glowroot - Java args: -javaagent:/opt/glowroot/glowroot.jar
+2026-03-04 08:41:59.964 INFO  org.glowroot - UI listening on 0.0.0.0:4000
+2026-03-04 11:19:34.811 INFO  org.glowroot - Glowroot version: 0.14.4, built 2025-05-07 00:19:18 +0000
+2026-03-04 11:19:34.824 INFO  org.glowroot - Java version: 21.0.10 (Eclipse Adoptium / Linux)
+2026-03-04 11:19:34.829 INFO  org.glowroot - Java args: -javaagent:/opt/glowroot/glowroot.jar
+2026-03-04 11:19:44.260 INFO  org.glowroot - UI listening on 0.0.0.0:4000
+2026-03-04 11:52:10.301 INFO  org.glowroot - Glowroot version: 0.14.4, built 2025-05-07 00:19:18 +0000
+2026-03-04 11:52:10.324 INFO  org.glowroot - Java version: 21.0.10 (Eclipse Adoptium / Linux)
+2026-03-04 11:52:10.326 INFO  org.glowroot - Java args: -javaagent:/opt/glowroot/glowroot.jar
+2026-03-04 11:52:25.244 INFO  org.glowroot - UI listening on 0.0.0.0:4000

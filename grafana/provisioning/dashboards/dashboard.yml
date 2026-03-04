@@ -1,0 +1,14 @@
+# Load dashboards from the order-platform folder
+apiVersion: 1
+
+providers:
+  - name: 'Order Platform'
+    orgId: 1
+    folder: 'Order Platform'
+    folderUid: 'order-platform'
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 30
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards/order-platform

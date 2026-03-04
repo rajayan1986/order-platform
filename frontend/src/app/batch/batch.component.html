@@ -1,0 +1,39 @@
+<div class="page-header">
+  <div>
+    <div class="page-title">Batch Ingestion and Validation</div>
+    <div class="page-sub">Upload or submit orders in batch; view validation status.</div>
+  </div>
+  <div class="page-actions">
+    <a routerLink="/dashboard" class="btn btn-ghost">Back to Dashboard</a>
+  </div>
+</div>
+
+<div class="content-grid">
+  <div class="panel">
+    <div class="panel-header">
+      <div class="panel-title"><div class="panel-title-dot"></div>Order Ingestion</div>
+    </div>
+    <div class="panel-body">
+      <p class="text-muted">Batch design: submit multiple orders via API or future file upload. Use existing POST /api/orders with unique idempotencyKey per order.</p>
+      <div class="form-group">
+        <label class="form-label">Idempotency key (batch id)</label>
+        <input type="text" class="form-input" placeholder="e.g. batch-2026-001" readonly />
+      </div>
+      <p class="text-dim">Plugin pattern: add validators (e.g. schema, inventory check) before persistence. Validation status appears below.</p>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-header">
+      <div class="panel-title"><div class="panel-title-dot green-dot"></div>Validation Status</div>
+    </div>
+    <div class="panel-body">
+      <div class="alert-item">
+        <div class="alert-icon blue">i</div>
+        <div>
+          <div class="alert-title">No batch runs yet</div>
+          <div class="alert-desc">Validation results will appear here after batch ingestion.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
